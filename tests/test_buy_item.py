@@ -8,6 +8,7 @@ from pages.final_page import Finish_page
 from pages.login_page import Login_page
 from pages.main_page import Main_page
 
+"""Тест покупки товара"""
 
 def test_buy_item(set_group):
     driver = webdriver.Firefox(executable_path='C:\\Users\\emily\\PycharmProjects\\resource\\geckodriver.exe')
