@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.core import driver
 from selenium.webdriver import Keys, ActionChains
 from base.base_class import Base
-
+import allure
 class Cofe_page(Base):
     def __init__(self, driver):
         super().__init__(driver)
@@ -15,7 +15,7 @@ class Cofe_page(Base):
 
     """Locators"""
 
-    ### Фильтр - бокс
+    ### Filter - BOX
     filter_box_1 = '//div[@class="filterBox filterBox-static coffee"]//span[text()="Яркий эспрессо"]'
     filter_box_2 = '//div[@class="filterBox filterBox-static coffee"]//span[text()="Сбалансированный эспрессо"]'
     filter_box_3 = '//div[@class="filterBox filterBox-static coffee"]//span[text()="Яркий фильтр"]'
@@ -26,34 +26,36 @@ class Cofe_page(Base):
     filter_box_8 = '//div[@class="filterBox filterBox-static coffee"]//span[text()="Наборы"]'
     filter_box_9 = '//div[@class="filterBox filterBox-static coffee"]//span[text()="Кофейный концентрат"]'
 
-    ### Фильтр - dropdown
+    ### Filter - DROPDOWN
     dropdown_price = '//button[@title="Цена"]'
     dropdown_type_roast = '//button[@title="Степень обжарки"]'
 
-    ### Фильтр - cсылки
+    ### Filter - LINKS
     filter_link_1 = '//div[@class="checkBtn-wrap filter-links"]//a[@data-id="1"]'
     filter_link_2 = '//div[@class="checkBtn-wrap filter-links"]//a[@data-id="2"]'
     filter_link_3 = '//div[@class="checkBtn-wrap filter-links"]//a[@data-id="3"]'
     filter_link_4 = '//div[@class="checkBtn-wrap filter-links"]//a[@data-id="4"]'
 
 
-    ### Checkbox в выпадающем списке цены
+    ### Checkbox in the price drop down list
     checkbox_price_height = '//span[contains(text(),"По возрастанию цены")]'
     checkbox_price_low = '//span[contains(text(),"По убыванию цены")]'
 
-    ### Checkbox в выпадающем списке степени прожарки
+    ### Checkbox in the drop-down list of roasting
     checkbox_roast_light = '//span[contains(text(),"Светлая")]'
     checkbox_roast_medium = '//span[contains(text(),"Средняя")]'
     checkbox_roast_dark = '//span[contains(text(),"Тёмная")]'
 
-    ### Сброс фильтров
+    ### Reset filters
     button_reset_filters = '//div[@class="resultFilter"]//a[@class="lightBtn"]'
 
-    ### Каталог продуктов
+    ### Product catalog
     buy_product_1079 = '//div[@class="card-wrap catalogCard"]//span[@class="buyText buyText_1079"]'
-    name_item = '//a[text() = "Christmas Blend 2023"]'
+    buy_product_54 = '//div[@class="card-wrap catalogCard"]//span[@class="buyText buyText_54"]'
+    name_item_1079 = '//a[text() = "Christmas Blend 2023"]'
+    name_item_54 = '//a[text() = "Колумбия Декаф"]'
 
-    ### Всплывающее окно корзины
+    ### Cart Popup
     popup_basket = '//div[@class="popupAdded-wrap"]//a[@class="blackBtn"]'
 
 
@@ -62,11 +64,14 @@ class Cofe_page(Base):
     def get_main_word(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.main_word_registration_page)))
 
-    def get_name_item(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.name_item)))
+    def get_name_item_1079(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.name_item_1079)))
+
+    def get_name_item_54(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.name_item_54)))
 
 
-    ### Фильтр - бокс
+    ### Filter - BOX
 
     def get_filter_box_1(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.filter_box_1)))
@@ -87,14 +92,14 @@ class Cofe_page(Base):
     def get_filter_box_9(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.filter_box_9)))
 
-    ### Фильтр - dropdown
+    ### Filter - DROPDOWN
 
     def get_filter_by_price(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.dropdown_price)))
     def get_filter_by_roast(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.dropdown_type_roast)))
 
-    ### Фильтр - cсылки
+    ### Filter - LINKS
     def get_filter_link_1(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.filter_link_1)))
     def get_filter_link_2(self):
@@ -106,7 +111,7 @@ class Cofe_page(Base):
 
 
 
-    ### Checkbox в выпадающем списке
+    ### Checkbox in the drop down list
     def get_checkbox_price_height(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.checkbox_price_height)))
     def get_checkbox_price_low(self):
@@ -118,16 +123,18 @@ class Cofe_page(Base):
     def get_checkbox_roast_dark(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.checkbox_roast_dark)))
 
-    ### Сброс фильтров
+    ### Reset filters
     def get_reset_filters(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.button_reset_filters)))
 
-    ### Каталог продуктов
+    ### Product catalog
     def get_buy_product_1079(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.buy_product_1079)))
+    def get_buy_product_54(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.buy_product_54)))
 
 
-    ### Перейти в корзину
+    ### Go to cart
     def get_basket_open(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.popup_basket)))
 
@@ -135,109 +142,123 @@ class Cofe_page(Base):
 
     """Actions"""
 
-    ### Фильтр - бокс
+
+    ### Filter - BOX
 
     def click_filter_box_1(self):
         self.get_filter_box_1().click()
-        print('Выбран фильтр ' + 'Яркий эспрессо')
+        print('Selected filter ' + 'Яркий эспрессо')
     def click_filter_box_2(self):
         self.get_filter_box_2().click()
-        print('Выбран фильтр ' + 'Сбалансированный эспрессо')
+        print('Selected filter ' + 'Сбалансированный эспрессо')
     def click_filter_box_3(self):
         self.get_filter_box_3().click()
-        print('Выбран фильтр ' + 'Яркий фильтр')
+        print('Selected filter ' + 'Яркий фильтр')
     def click_filter_box_4(self):
         self.get_filter_box_4().click()
-        print('Выбран фильтр ' + 'Сбалансированный фильтр')
+        print('Selected filter ' + 'Сбалансированный фильтр')
     def click_filter_box_5(self):
         self.get_filter_box_5().click()
-        print('Выбран фильтр ' + 'Капсулы')
+        print('Selected filter ' + 'Капсулы')
     def click_filter_box_6(self):
         self.get_filter_box_6().click()
-        print('Выбран фильтр ' + 'Дрип-пакеты')
+        print('Selected filter ' + 'Дрип-пакеты')
     def click_filter_box_7(self):
         self.get_filter_box_7().click()
-        print('Выбран фильтр ' + 'Кофе в банках')
+        print('Selected filter ' + 'Кофе в банках')
     def click_filter_box_8(self):
         self.get_filter_box_8().click()
-        print('Выбран фильтр ' + 'Наборы')
+        print('Selected filter ' + 'Наборы')
     def click_filter_box_9(self):
         self.get_filter_box_9().click()
-        print('Выбран фильтр ' + 'Кофейный концентрат')
+        print('Selected filter ' + 'Кофейный концентрат')
 
-    ### Фильтр - dropdown
+    ### Filter - DROPDOWN
 
     def click_filter_price(self):
-        self.get_filter_by_price().click()
-        print('Фильтр по цене выбран')
+        with allure.step('Click filter price'):
+            self.get_filter_by_price().click()
+            print('Price filter selected')
     def click_filter_roast(self):
         self.get_filter_by_roast().click()
-        print('Фильтр по степени обжарки выбран')
+        print('Roast filter selected')
 
 
-    ### Фильтр - cсылки
+    ### Filter - LINKS
     def click_filter_link_1(self):
         self.get_filter_link_1().click()
-        print('Фильтр = для Молочных напитков выбран')
+        print('Filter = для Молочных напитков selected')
     def click_filter_link_2(self):
         self.get_filter_link_2().click()
-        print('Фильтр = c Низкой кислотностью выбран')
+        print('Filter = c Низкой кислотностью selected')
     def click_filter_link_3(self):
-        self.get_filter_link_3().click()
-        print('Фильтр = для Кофемашины выбран')
+        with allure.step('Click filter link 3'):
+            self.get_filter_link_3().click()
+            print('Filter = для Кофемашины selected')
+            time.sleep(5)
     def click_filter_link_4(self):
         self.get_filter_link_4().click()
-        print('Фильтр = Крекий кофе выбран')
+        print('Filter = Крекий кофе selected')
 
 
-    ### Checkbox в выпадающем списке
+    ### Checkbox in the drop down list
 
     def click_checkbox_price_height(self):
         self.get_checkbox_price_height().click()
-        print('Выбран фильтр - по возрастанию цены')
+        print('Selected filter - по возрастанию цены')
     def click_checkbox_price_low(self):
         self.get_checkbox_price_low().click()
-        print('Выбран фильтр - по убыванию цены')
+        print('Selected filter - по убыванию цены')
     def click_checkbox_roast_light(self):
         self.get_checkbox_roast_light().click()
-        print('Выбран фильтр степень обжарки - Светлая')
+        print('Roast filter selected - Светлая')
     def click_checkbox_roast_medium(self):
         self.get_checkbox_roast_medium().click()
-        print('Выбран фильтр степень обжарки - Средняя')
+        print('Roast filter selected - Средняя')
     def click_checkbox_roast_dark(self):
         self.get_checkbox_roast_dark().click()
-        print('Выбран фильтр степень обжарки - Тёмная')
+        print('Roast filter selected - Тёмная')
 
-    ### Сброс фильтров
+    ### Reset Filters
     def click_reset_filters(self):
         self.get_reset_filters().click()
-        print('Сбросить Фильтры - выполнено')
+        print('Reset Filters - Done')
 
-    ### Купить продукт
+    ### Buy product
     def click_buy_product_1079(self):
-        self.get_name_item()
-        self.value_name_1079 = self.get_name_item().text
-        print('Выбран товар ' + self.value_name_1079)
-        self.get_buy_product_1079().click()
-        print('Продукт отправлен в корзину')
+        with allure.step('Click buy product 1079'):
+            self.get_name_item_1079()
+            self.value_name_1079 = self.get_name_item_1079().text
+            print('Selected item ' + self.value_name_1079)
+            self.get_buy_product_1079().click()
+            print('Product sent to cart')
 
-    ### Перейти в Корзину
+    def click_buy_product_54(self):
+        with allure.step('Click buy product 54'):
+            self.get_name_item_54()
+            self.value_name_54 = self.get_name_item_54().text
+            print('Selected item ' + self.value_name_54)
+            self.get_buy_product_54().click()
+            print('Product sent to cart')
+
+
+    ### Go to Cart
     def click_open_basket(self):
         self.get_basket_open().click()
-        print('Корзина с выбранными продуктами открыта')
-
+        print('Shopping cart with selected products is open')
 
 
 
     """Methods"""
-    ### Фильтр - бокс
+    ### Filter - BOX
 
     def fb_1(self):
         self.click_filter_box_1()
     def fb_2(self):
         self.click_filter_box_2()
     def fb_3(self):
-        self.click_filter_box_3()
+        with allure.step('Fb3'):
+            self.click_filter_box_3()
     def fb_4(self):
         self.click_filter_box_4()
     def fb_5(self):
@@ -251,14 +272,15 @@ class Cofe_page(Base):
     def fb_9(self):
         self.click_filter_box_9()
 
-    ### Фильтр - dropdown
+    ### Filter - dropdown
 
     def by_price(self):
         self.click_filter_price()
     def by_roast(self):
-        self.click_filter_roast()
+        with allure.step('By roast'):
+            self.click_filter_roast()
 
-    ### Фильтр - cсылки
+    ### Filter - cсылки
     def by_filter_link_1(self):
         self.click_filter_link_1()
     def by_filter_link_2(self):
@@ -270,31 +292,40 @@ class Cofe_page(Base):
 
 
 
-    ### Checkbox в выпадающем списке
+    ### Checkbox in the drop down list
     def by_price_height(self):
-        self.click_checkbox_price_height()
+        with allure.step('By price height'):
+            self.click_checkbox_price_height()
     def by_price_low(self):
         self.click_checkbox_price_low()
     def by_roast_light(self):
         self.click_checkbox_roast_light()
     def by_roast_meduim(self):
-        self.click_checkbox_roast_medium()
+        with allure.step('By roast meduim'):
+            self.click_checkbox_roast_medium()
     def by_roast_dark(self):
         self.click_checkbox_roast_dark()
 
 
-    ### Сброс фильтров
+    ### Reset filters
     def reset_filters(self):
         self.click_reset_filters()
 
-    ### Купить продукт
-    def buy_button(self):
+    ### Buy product
+    def buy_button_1079(self):
         self.click_buy_product_1079()
 
-    ### Открыть Корзину
+    def buy_button_54(self):
+        self.click_buy_product_54()
+
+
+
+    ### Open Cart
     def basket_open(self):
-        self.click_open_basket()
-        self.assert_word(self.get_main_word(), 'ОФОРМЛЕНИЕ')
+        with allure.step('Basket open'):
+            self.click_open_basket()
+            self.assert_word(self.get_main_word(), 'ОФОРМЛЕНИЕ')
+
 
 
 

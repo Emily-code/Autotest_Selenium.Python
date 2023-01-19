@@ -1,4 +1,5 @@
 import time
+import allure
 
 from selenium import webdriver
 
@@ -8,8 +9,9 @@ from pages.final_page import Finish_page
 from pages.login_page import Login_page
 from pages.main_page import Main_page
 
-"""Тест покупки товара"""
+"""Coffee Buying Test"""
 
+@allure.description('Test buy item')
 def test_buy_item(set_group):
     driver = webdriver.Firefox(executable_path='C:\\Users\\emily\\PycharmProjects\\resource\\geckodriver.exe')
     print('Start Test')
@@ -27,9 +29,7 @@ def test_buy_item(set_group):
     cp.click_filter_price()
     cp.by_price_height()
     cp.click_filter_link_3()
-    cp.by_roast()
-    cp.by_roast_meduim()
-    cp.click_buy_product_1079()
+    cp.click_buy_product_54()
     cp.basket_open()
 
     bp = Basket_page(driver)
@@ -38,7 +38,7 @@ def test_buy_item(set_group):
     fp = Finish_page(driver)
     fp.finish()
 
-    print('Оформление заказа почти закончено, осталось ввести данные вашей карты')
+    print('The checkout is almost complete, it remains to enter your card details')
     time.sleep(5)
     driver.quit()
 

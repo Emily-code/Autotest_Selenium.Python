@@ -1,4 +1,5 @@
 import time
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -47,34 +48,36 @@ class Main_page(Base):
 
     def click_menu_buy(self):
         self.get_menu_buy().click()
-        print('Меню - Купить открыто')
+        print('Menu - Купить is open')
     def click_cof(self):
         self.get_select_cof().click()
-        print('Выбрана категория - Кофе')
+        print('Category selected - Кофе')
     def click_tea(self):
         self.get_select_tea().click()
-        print('Выбрана категория - Чай')
+        print('Category selected - Чай')
     def click_accessories(self):
         self.get_select_accessories().click()
-        print('Выбрана категория - Акссесуары')
+        print('Category selected - Акссесуары')
     def click_chocolate(self):
         self.get_select_chocolate().click()
-        print('Выбрана категория - Шоколад')
+        print('Category selected - Шоколад')
     def click_subscription(self):
         self.get_select_subscription().click()
-        print('Выбрана категория - Подписка на кофе')
+        print('Category selected - Подписка на кофе')
     def click_gift_card(self):
         self.get_select_gift_card().click()
-        print('Выбрана категория - Подарочный сертификат')
+        print('Category selected - Подарочный сертификат')
 
 
 
 
     """Methods"""
     def select_menu_buy(self):
-        self.click_menu_buy()
+        with allure.step('Select Menu Buy'):
+            self.click_menu_buy()
     def cof(self):
-        self.click_cof()
+        with allure.step('Coffe'):
+            self.click_cof()
     def tea(self):
         self.click_tea()
     def accessories(self):

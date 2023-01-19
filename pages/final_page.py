@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
-
+import allure
 class Finish_page(Base):
 
     def __init__(self, driver):
@@ -12,6 +12,7 @@ class Finish_page(Base):
         self.driver = driver
 
     def finish(self):
-        self.get_current_url()
-        self.assert_url('https://shop.tastycoffee.ru/basket')
-        self.finish_screenshot()
+        with allure.step('Finish'):
+            self.get_current_url()
+            self.assert_url('https://shop.tastycoffee.ru/basket')
+            self.finish_screenshot()

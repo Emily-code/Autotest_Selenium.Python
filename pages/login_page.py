@@ -1,4 +1,6 @@
 import time
+
+import allure
 from selenium.webdriver.common.action_chains import ActionChains
 
 from selenium.webdriver.common.by import By
@@ -38,28 +40,29 @@ class Login_page(Base):
     """Actions"""
     def click_button_button_login_registration(self):
         self.get_button_login_registration().click()
-        print('Войти в личный кабинет')
+        print('Login to your personal account')
     def input_login_name(self, login_name):
         self.get_name().send_keys(login_name)
-        print('Введите логин')
+        print('Enter login')
     def input_password(self, password):
         self.get_password().send_keys(password)
-        print('Введите пароль')
+        print('Enter password')
     def click_log(self):
         self.get_button_log().click()
-        print('Вы авторизованы')
+        print('You are logged in')
 
 
     """Methods"""
     def authorization(self):
-        self.driver.get(self.url)
-        self.driver.maximize_window()
-        self.get_current_url()
-        self.click_button_button_login_registration()
-        self.input_login_name('emy.vi@mail.ru')
-        self.input_password('test1234')
-        self.click_log()
-        self.assert_word(self.get_main_word(), 'Ваша скидка')
+        with allure.step('Authorization'):
+            self.driver.get(self.url)
+            self.driver.maximize_window()
+            self.get_current_url()
+            self.click_button_button_login_registration()
+            self.input_login_name('emy.vi@mail.ru')
+            self.input_password('test1234')
+            self.click_log()
+            self.assert_word(self.get_main_word(), 'Ваша скидка')
 
 
 
