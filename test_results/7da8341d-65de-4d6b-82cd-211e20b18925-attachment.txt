@@ -1,0 +1,17 @@
+Enter system
+Start Test
+Current url is https://shop.tastycoffee.ru/
+Login to your personal account
+Enter login
+Enter password
+You are logged in
+You have successfully moved to the next step
+Menu - Купить is open
+Category selected - Кофе
+Selected filter Яркий фильтр
+Price filter selected
+Selected filter - по возрастанию цены
+Filter = для Кофемашины selected
+Roast filter selected
+Roast filter selected - Средняя
+Exit system
