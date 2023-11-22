@@ -6186,3 +6186,23 @@ JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error:
 JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
 JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
 JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+1700674139583	geckodriver	INFO	Listening on 127.0.0.1:54930
+1700674142681	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54931" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\emily\\AppData\\Local\\Temp\\rust_mozprofileK9BJIj"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700674143188	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700674143270	Marionette	INFO	Listening on port 54938
+WebDriver BiDi listening on ws://127.0.0.1:54931
+Read port: 54938
+1700674143517	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54931/devtools/browser/647e9f4b-4cbf-41af-9bb3-5d950fe52633
+1700674149637	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR, line 479: Script terminated by timeout at:
+aa.uh@https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR:479:89
+get@https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR:477:119
+stop@https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR:477:87
+aa.Ik/c/<@https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR:477:412
+
+1700674163550	Marionette	INFO	Stopped listening on port 54938
+Dynamically enable window occlusion 1
