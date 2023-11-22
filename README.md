@@ -1,13 +1,18 @@
-Test automation project for the website: <br><a target="_blank" href="https://shop.tastycoffee.ru/">Tasty coffee shop</a>
+# Test automation project for the website <br> <a target="_blank" href="https://shop.tastycoffee.ru/">Tasty coffee shop</a>
+
 ---
 
 ## :open_book: Contents :
+- [Overview](#triangular_flag_on_post-Overview)
 - [Tools](#gear-The-following-technologies-and-tools-are-used-in-the-project)
-- [Test review](#heavy_check_mark-что-проверяем)
-- [Reports](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
+- [Test scenarios](#triangular_flag_on_post-Test-scenarios)
+- [Reports](#triangular_flag_on_post-Test Report)
 
 ---
+## :triangular_flag_on_post: Overview
+### Automated E2E testing at online coffee shop
 
+---
 ## :gear: The following technologies and tools are used in the project:
 <p align="center">
     <img width="5%" title="Python" src="https://github.com/Emily-code/Emily-code/blob/main/images/python.png">
@@ -16,3 +21,11 @@ Test automation project for the website: <br><a target="_blank" href="https://sh
     <img width="5%" title="Allure Report" src="https://github.com/Emily-code/Emily-code/blob/main/images/allure_report.png">
     <img width="5%" title="Selenium" src="https://github.com/Emily-code/Emily-code/blob/main/images/selenium.png">
 </p>
+
+
+---
+## :triangular_flag_on_post: Test scenarios
+
+
+
+## :triangular_flag_on_post: Test Report
