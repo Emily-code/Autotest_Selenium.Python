@@ -6,7 +6,7 @@
 - [Overview](#triangular_flag_on_post-Overview)
 - [Tools](#gear-The-following-technologies-and-tools-are-used-in-the-project)
 - [Test scenarios](#triangular_flag_on_post-Test-scenarios)
-- [Reports](#triangular_flag_on_post-Test Report)
+- [Reports](#triangular_flag_on_post-Test-Report)
 
 ---
 ## :triangular_flag_on_post: Overview
