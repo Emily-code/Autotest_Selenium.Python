@@ -1,4 +1,4 @@
-# Test automation project for the website <br> <a target="_blank" href="https://shop.tastycoffee.ru/">Tasty coffee shop</a>
+# UI Test automation project for the website <br> <a target="_blank" href="https://shop.tastycoffee.ru/">Tasty coffee shop</a>
 
 ---
 
@@ -25,7 +25,12 @@
 
 ---
 ## :triangular_flag_on_post: Test scenarios
+> - User authorization
+> - Product selection on the main page
+> - Selecting item using different filters
+> - Adding the selected item to the shopping cart 
+> - Order verification on the final payment page
 
-
-
+---
 ## :triangular_flag_on_post: Test Report
+
