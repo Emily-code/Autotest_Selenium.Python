@@ -35,10 +35,10 @@
 ## :pushpin: Test Report using [Allure report](http://192.168.0.161:51659/index.html#)
 ### Test overview 
 <p align="center">
-    <img src="C:\Users\emily\PycharmProjects\Final_Project\images\Allure report.jpg" alt="Allure report"/>
+    <img src="images/Allure report.jpg" alt="Allure report"/>
 </p>
 
 ### Test Suites
 <p align="center">
-    <img src="C:\Users\emily\PycharmProjects\Final_Project\images\allure_suites.jpg" alt="Allure report"/>
+    <img src="images/allure_suites.jpg" alt="Allure report"/>
 </p>
