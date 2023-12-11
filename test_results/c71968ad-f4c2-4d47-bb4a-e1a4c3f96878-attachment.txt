@@ -1,0 +1,24 @@
+Enter system
+Start Test
+Current url is https://shop.tastycoffee.ru/
+Login to your personal account
+Enter login
+Enter password
+You are logged in
+You have successfully moved to the next step
+Menu - Купить is open
+Category selected - Кофе
+Selected filter Яркий фильтр
+Price filter selected
+Selected filter - по возрастанию цены
+Filter = для Кофемашины selected
+Selected item Колумбия Декаф
+Product sent to cart
+Shopping cart with selected products is open
+You have successfully moved to the next step
+The product in the order corresponds to the selected article - Колумбия Декаф
+Current url is https://shop.tastycoffee.ru/basket
+URL is correct
+Screenshot saved successfully
+The checkout is almost complete, it remains to enter your card details
+Exit system

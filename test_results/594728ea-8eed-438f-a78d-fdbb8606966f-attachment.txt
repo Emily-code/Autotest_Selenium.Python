@@ -1,0 +1,9 @@
+Enter system
+Start Test
+Current url is https://shop.tastycoffee.ru/
+Login to your personal account
+Enter login
+Enter password
+You are logged in
+You have successfully moved to the next step
+Exit system

@@ -6206,3 +6206,51 @@ aa.Ik/c/<@https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR:477:412
 
 1700674163550	Marionette	INFO	Stopped listening on port 54938
 Dynamically enable window occlusion 1
+1702325652458	geckodriver	INFO	Listening on 127.0.0.1:50344
+1702325655549	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50345" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\emily\\AppData\\Local\\Temp\\rust_mozprofileJIm4Ao"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702325656073	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1702325656153	Marionette	INFO	Listening on port 50352
+WebDriver BiDi listening on ws://127.0.0.1:50345
+Read port: 50352
+1702325656467	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50345/devtools/browser/736d1450-1c7b-4ebc-a465-3a8df32045db
+1702328014859	Marionette	INFO	Stopped listening on port 50352
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50400" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\emily\\AppData\\Local\\Temp\\rust_mozprofiledPX81I"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702325747246	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1702325747317	Marionette	INFO	Listening on port 50407
+WebDriver BiDi listening on ws://127.0.0.1:50400
+Read port: 50407
+1702325747552	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50400/devtools/browser/63d371b3-8197-4203-99d9-66cd52f45f3c
+1702325754235	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR, line 478: Script terminated by timeout at:
+aa.wh@https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR:478:42
+get@https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR:476:119
+stop@https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR:476:87
+aa.Jk/c/<@https://www.googletagmanager.com/gtag/js?id=G-067Q940NTR:476:412
+
+1702328013773	Marionette	INFO	Stopped listening on port 50407
+Dynamically enable window occlusion 1
+environment
+1702325941725	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1702325941809	Marionette	INFO	Listening on port 50585
+WebDriver BiDi listening on ws://127.0.0.1:50576
+Read port: 50585
+1702325942058	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50576/devtools/browser/02146c82-d45b-4755-8def-9fd7d819feb8
+1702325950213	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 5: Script terminated by timeout at:
+w@https://top-fwz1.mail.ru/js/code.js:5:262
+e@https://top-fwz1.mail.ru/js/code.js:45:60
+b@https://top-fwz1.mail.ru/js/code.js:44:444
+
+1702325957766	Marionette	INFO	Stopped listening on port 50585
+Dynamically enable window occlusion 1

@@ -13,7 +13,9 @@ from pages.main_page import Main_page
 
 @allure.description('Test buy item')
 def test_buy_item(set_group):
-    driver = webdriver.Firefox(executable_path='C:\\Users\\emily\\PycharmProjects\\resource\\geckodriver.exe')
+    # driver = webdriver.Firefox(executable_path='C:\\Users\\emily\\PycharmProjects\\resource\\geckodriver.exe')
+    driver = webdriver.Chrome(executable_path='C:\\Users\\emily\\PycharmProjects\\resource\\chromedriver.exe')
+
     print('Start Test')
 
     login = Login_page(driver)
