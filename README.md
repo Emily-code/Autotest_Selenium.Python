@@ -13,7 +13,7 @@
 ### Automated E2E testing at online coffee shop
 
 ---
-## :pushpin: The following technologies and tools are used in the project:
+## :pushpin: The following technologies and tools are used in the project
 <p align="center">
     <img width="5%" title="Python" src="https://github.com/Emily-code/Emily-code/blob/main/images/python.png">
     <img width="5%" title="Pytest" src="https://github.com/Emily-code/Emily-code/blob/main/images/pytest.png">
